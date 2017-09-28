@@ -1,0 +1,41 @@
+<html>
+<!DOCTYPE html>
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Playfair+Display|Raleway:300,400,500,600,700" rel="stylesheet">
+
+    <!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.2.1/vega-lite.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js" charset="utf-8"></script>-->
+
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        function render_graph(selector, obj){
+            var opt = {
+                spec: obj,
+                actions: false,
+                renderer: 'svg',
+                mode: "vega-lite"
+            };
+
+            vg.embed(selector, opt);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+{% for section in sections %}
+    {{ section.rendered_html|safe }}
+{% endfor %}
+</body>
+<script>
+{% for graph in graphs %}
+    {{ graph.rendered_js|safe }}
+{% endfor %}
+</script>
+</html>

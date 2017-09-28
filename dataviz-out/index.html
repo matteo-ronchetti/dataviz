@@ -1,0 +1,68 @@
+<html>
+<!DOCTYPE html>
+<head>
+    <title>Seattle Weather</title>
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Playfair+Display|Raleway:300,400,500,600,700" rel="stylesheet">
+
+    <!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.2.1/vega-lite.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js" charset="utf-8"></script>-->
+
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        function render_graph(selector, obj){
+            var opt = {
+                spec: obj,
+                actions: false,
+                renderer: 'svg',
+                mode: "vega-lite"
+            };
+
+            vg.embed(selector, opt);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Seattle Weather</h1>
+    </header>
+
+    <section class="commented">
+    <h3>Overview</h3>
+    <div class="body">
+        <div class='chart'><img src='charts/viz_1.svg'></div>
+        <div>
+            <p>Lorem ipsum dolor sit amet, cum pertinacia definitionem an. His ne oratio facilis voluptatum, nam lorem putant qualisque ad. Mea in affert nostrum. Mea cu ignota adipiscing. Omnis mnesarchum vix cu, omnes impedit democritum nec te. Malorum urbanitas consectetuer ei eam, no sea paulo tollit detracto.</p>
+        </div>
+    </div>
+</section>
+
+    <section class="titled">
+    <h3>Precipitations</h3>
+    <div class="body charts">
+    
+        <div class='chart'><img src='charts/viz_2.svg'></div>
+    
+        <div class='chart'><img src='charts/viz_3.svg'></div>
+    
+        <div class='chart'><img src='charts/viz_4.svg'></div>
+    
+    </div>
+</section>
+
+</body>
+<script>
+
+    
+
+    
+
+    
+
+    
+
+</script>
+</html>

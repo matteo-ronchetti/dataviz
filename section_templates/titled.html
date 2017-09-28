@@ -1,0 +1,8 @@
+<section class="titled">
+    <h3>{{ title }}</h3>
+    <div class="body charts">
+    {% for chart in charts %}
+        {{ chart.rendered_html|safe }}
+    {% endfor %}
+    </div>
+</section>
